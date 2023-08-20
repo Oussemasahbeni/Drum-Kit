@@ -10,7 +10,7 @@ const btn=document.querySelectorAll(".drum");
 // button mouse press
 btn.forEach((element)=>{
         element.addEventListener('click',  function() {
-        let btnClicked=this.innerHTML;
+        let btnClicked=this.innerHTML.toLowerCase();
         // this is the current button clicked that trigger the add event listener
         playSounds(btnClicked);
         buttonAnimation(btnClicked);
@@ -20,7 +20,7 @@ btn.forEach((element)=>{
 
 // keyboard press
 document.addEventListener('keydown',(event)=>{
-    let KeyClicked=event.key;
+    let KeyClicked=event.key.toLowerCase();
       playSounds(KeyClicked)
       buttonAnimation(KeyClicked)
 
